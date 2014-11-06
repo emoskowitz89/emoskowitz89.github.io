@@ -1,0 +1,28 @@
+body {	}
+h1 {
+	text-align:center;
+}
+#header {
+    background-color:black;
+    color:white;
+    text-align:center;
+    padding:5px;
+}
+#nav {
+    line-height:30px;
+    background-color:#eeeeee;
+    width:150px;
+    float:left;
+    padding:5px; 
+}
+#section {
+    width:1200px;
+    padding:10px; 
+}
+#footer {
+    background-color:black;
+    color:white;
+    clear:both;
+    text-align:center;
+    padding:5px; 
+}
