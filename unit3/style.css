@@ -1,57 +1,33 @@
 /* Global Styles */
 
-* {
-	margin: 0;
-	color:#fff;
-	font-size:18px;
-	font-family: arial;
-}
+* { margin: 0;padding:0;box-sizing:border-box; }
 
 body {
-	background-color: #52596b;	
-}
-
-p { font-size:16px;}
-
-h1 {
-	font-size: 24px;
-	margin-top: 50px;
-	font-weight: 200;
-}
-
-header {
-	margin: 0px auto;
-	max-width: 960px;
-	width:100%;
-	height: 500px;
-	background: url("http://i.imgur.com/DKhC13Y.jpg");
-	background-position: right top;
+	background: url("IMAGES/background.jpg");
+	background-color: #52596b;
 	background-size: cover;
-	padding:50px;
+	color:#fff;
+	font-size:20px;
+	font-family: arial, helvetica, sans-serif;
 }
 hr {
-	display: block;
-	height: 1px;
-	border: 0;
-	border-top: 1px solid #f00;
+	border: 1px solid #f00;
 	margin: 1em 0;
-	padding: 0;
 	width:30px;
 }
 
 /* Body Elements */
 
-#topBanner {
-	position: relative;
-	height:8px;
-	width: 100%;
-	background: url("http://i.imgur.com/7IGKUAO.jpg");
-	background-size: cover;
+.topBanner {
+	background: url("IMAGES/stripes.png");
 	background-repeat: repeat-x;
+	height:12px;
+	width: 100%;
+	position: absolute;
+	top:0;
+	left:0;
 }
 
 .appStore {
-	height: 50px;
-	width: 175px;
 	padding: 25px 0;
 }
