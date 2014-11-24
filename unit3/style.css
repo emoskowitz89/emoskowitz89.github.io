@@ -3,9 +3,8 @@
 * { margin: 0;padding:0;box-sizing:border-box; }
 
 body {
-	background: url("IMAGES/background.jpg");
-	background-color: #52596b;
-	background-size: cover;
+	background: url("IMAGES/stripes.png") repeat-x, url("IMAGES/background.jpg") no-repeat #52596b;
+	background-size: auto, cover;
 	color:#fff;
 	font-size:20px;
 	font-family: arial, helvetica, sans-serif;
@@ -20,17 +19,6 @@ hr {
 }
 
 /* Body Elements */
-
-.topBanner {
-	background: url("IMAGES/stripes.png");
-	background-repeat: repeat-x;
-	height:12px;
-	width: 100%;
-	position: absolute;
-	top:0;
-	left:0;
-}
-
 .appStore {
 	padding: 25px 0;
 }
