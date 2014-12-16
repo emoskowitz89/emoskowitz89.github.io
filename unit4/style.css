@@ -27,10 +27,10 @@ header {
   header img { float:left;
 }
 
-  header .slogan { position: absolute;
-    height:100px;
-    width: 500px;
-    top: 40px;
+header .slogan { position: absolute;
+  height:100px;
+  width: 500px;
+  top: 40px;
 }
 
 nav {
