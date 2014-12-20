@@ -7,6 +7,12 @@
   height: 0;
 }
 
+.element {
+	position: relative;
+	top:50%
+	transform:translateY(-50%);
+}
+
 body {
   font-family: 'Montserrat Alternates'
 }
@@ -15,7 +21,8 @@ h1, h2 {
   font-weight: 800;
   text-transform: lowercase;
   display: inline-block;
-  color:#0067B3
+  color:#0067B3;
+  line-height: 0px; 
 }
 
 h1 {
@@ -46,14 +53,21 @@ li {
 }
 
 div {
-  padding: 30px;
+  padding: 10px;
+  margin:10px;
+  width: 960px;
+  float:left;
+  width:480px;
+  text-align: justify;
+  text-justify: inter-word;
+  line-height: 30px;
 }
 
 nav {
   font-size: 22px;
   float: none;
   background:#00ADEF;
-  margin: auto;
+  margin: right;
   padding:5px;
 }
 
@@ -80,6 +94,13 @@ img {
   margin: 0 auto;
   clear: both;
   width: 480px;
+ }
+
+header {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	z-index: 1;
 }
 
 #hero {
