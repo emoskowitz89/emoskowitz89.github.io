@@ -31,7 +31,7 @@ h1 {
 
 h2 {
   font-size: 26px;
-  padding: 13px 0;
+  padding: 0px 0;
   color: #0067B3;
   border-bottom-color: #0067B3;
 }
@@ -69,7 +69,6 @@ nav {
   background:#00ADEF;
   margin: right;
   padding:0;
-  width: 960px;
 }
 
 a:hover { color:white;}
