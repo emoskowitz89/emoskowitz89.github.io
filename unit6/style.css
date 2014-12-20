@@ -61,6 +61,7 @@ div {
   text-align: justify;
   text-justify: inter-word;
   line-height: 30px;
+  color:#0067B3;
 }
 
 nav {
@@ -83,10 +84,11 @@ nav a {
 
 footer {
   text-align: center;
-  border-top: 2px solid black;
+  border-top: 2px solid #0067B3;
   padding: 18px 0;
   margin-top: 40px;
   clear: both;
+  color:#0067B3;
 }
 
 img {
