@@ -65,10 +65,11 @@ div {
 
 nav {
   font-size: 22px;
-  float: none;
+  float: right;
   background:#00ADEF;
   margin: right;
-  padding:5px;
+  padding:0;
+  width: 960px;
 }
 
 a:hover { color:white;}
@@ -101,21 +102,8 @@ header {
 	left: 0px;
 	top: 0px;
 	z-index: 1;
+	clear: both;
+	float: left;
 }
 
-#hero {
-  background: #fffebb;
-}
-
-#about {
-  font-size: 28px;
-  width: 40%;
-  display: inline-block;
-}
-
-#services {
-  font-size: 22px;
-  width: 40%;
-  float: right;
-}
 
