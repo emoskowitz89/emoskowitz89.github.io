@@ -5,7 +5,8 @@ body {
   font-size: 20px;
   line-height: 1.25em;
   font-weight: normal;
-  color: white;
+  color:#411a14;
+  line-height: 1.75em;
 }
 
 header { 
@@ -13,10 +14,11 @@ header {
   color:#411a14;
   text-align: left;
 }
+
 header img {
   display:block;
   float:left;
-  width:200px;
+  width:250px;
 }
 nav {
   background:rgba(65,26,0,20);
@@ -46,16 +48,16 @@ h1 {
   color:#411a14;
   padding: 30px;
   text-align: center;
-  line-height: 1em;
 }
 
 p {
   color:#411a14;
+  font-size:.75em;
+  line-height: 1.5em;
 }
 header p {
   font-size:1.25em;
-  line-height: 1em;
-  padding: 0px;
+  line-height: 1.75em;
   width:60%;
 }
 .first {
@@ -85,8 +87,3 @@ section {
   content: " ";
   clear: both;
   height: 0;
-<<<<<<< HEAD
-}
-=======
-}
->>>>>>> FETCH_HEAD
