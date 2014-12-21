@@ -9,13 +9,14 @@ body {
 }
 
 header { 
-  width:100%;
+  width:1440px;
   color:#411a14;
-  line-height: 50px;
   text-align: left;
 }
 header img {
-  width:400px;
+  display:block;
+  float:left;
+  width:200px;
 }
 nav {
   background:rgba(65,26,0,20);
@@ -55,12 +56,12 @@ header p {
   font-size:1.25em;
   line-height: 1em;
   padding: 0px;
-  text-align: left;
+  width:60%;
 }
-.1st {
+.first {
   float:left;
 }
-.2nd {
+.second {
   float:right;
 }
 
