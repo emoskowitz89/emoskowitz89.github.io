@@ -9,7 +9,7 @@ body {
 }
 
 header { 
-  width:1440px;
+  width:1200px;
   color:#411a14;
   text-align: left;
 }
@@ -27,7 +27,7 @@ nav {
 }
 
 nav ul {
-  margin:0px 240px auto;
+  margin:0px 120px;
   width:960px;
 }
 
@@ -67,8 +67,16 @@ header p {
 
 section {
     text-align:center;
-    width:80%;
+    width:1200px;
     padding:10px;
+}
+.column {
+  float:left;
+  padding:20px;
+  width:25%;
+}
+.column img {
+  width:100%;
 }
 .clearfix:after {
   visibility: hidden;
