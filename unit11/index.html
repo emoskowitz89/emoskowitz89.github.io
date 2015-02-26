@@ -1,0 +1,299 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+    <html xmlns="http://www.w3.org/1999/xhtml">
+        <head>
+            <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        	<meta name="viewport" content="width=device-width, initial-scale=1"/>    
+            <title>Ellen Michaels Design Portfolio</title>
+            <link rel="stylesheet" type="text/css" href="css/style.css">
+            <link href='http://fonts.googleapis.com/css?family=Montserrat+Alternates' rel='stylesheet' type='text/css'>
+            <script src="js/jquery.js"></script>
+            <script src="js/jquery-scrollto.js"></script>
+            <script src="js/jQueryRotate.js"></script>
+			<script src="js/jquery-ui.min.js"></script>
+			<script type="text/javascript" src="js/jquery.mousewheel-3.0.6.pack.js"></script>
+            <script type="text/javascript" src="images/source/jquery.fancybox.js?v=2.1.5"></script>
+            <link rel="stylesheet" type="text/css" href="images/source/jquery.fancybox.css?v=2.1.5" media="screen" />
+            <link rel="stylesheet" type="text/css" href="images/source/helpers/jquery.fancybox-buttons.css?v=1.0.5" />
+            <script type="text/javascript" src="images/source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+            <link rel="stylesheet" type="text/css" href="images/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" />
+            <script type="text/javascript" src="images/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>            
+
+			<script type="text/javascript">
+            //<![CDATA[
+        
+            var tabLinks = new Array();
+            var contentDivs = new Array();
+        
+            function init() {
+        
+              var tabListItems = document.getElementById('tabs').childNodes;
+              for ( var i = 0; i < tabListItems.length; i++ ) {
+                if ( tabListItems[i].nodeName == "LI" ) {
+                  var tabLink = getFirstChildWithTagName( tabListItems[i], 'A' );
+                  var id = getHash( tabLink.getAttribute('href') );
+                  tabLinks[id] = tabLink;
+                  contentDivs[id] = document.getElementById( id );
+                }
+              }
+        
+              var i = 0;
+        
+              for ( var id in tabLinks ) {
+                tabLinks[id].onclick = showTab;
+                tabLinks[id].onfocus = function() { this.blur() };
+                if ( i == 0 ) tabLinks[id].className = 'selected';
+                i++;
+              }
+        
+              var i = 0;
+        
+              for ( var id in contentDivs ) {
+                if ( i != 0 ) contentDivs[id].className = 'tabContent hide';
+                i++;
+              }
+            }
+        
+            function showTab() {
+              var selectedId = getHash( this.getAttribute('href') );
+        
+              for ( var id in contentDivs ) {
+                if ( id == selectedId ) {
+                  tabLinks[id].className = 'selected';
+                  contentDivs[id].className = 'tabContent';
+                } else {
+                  tabLinks[id].className = '';
+                  contentDivs[id].className = 'tabContent hide';
+                }
+              }
+        
+              return false;
+            }
+        
+            function getFirstChildWithTagName( element, tagName ) {
+              for ( var i = 0; i < element.childNodes.length; i++ ) {
+                if ( element.childNodes[i].nodeName == tagName ) return element.childNodes[i];
+              }
+            }
+        
+            function getHash( url ) {
+              var hashPos = url.lastIndexOf ( '#' );
+              return url.substring( hashPos + 1 );
+            }
+        
+            //]]>
+            </script>
+        </head>
+        
+        <body onload="init()">        
+        	<header>
+                <nav>
+                	<div class="navbar">
+                        <div class="workLink">work</div>
+                        <div class="contactLink">contact</div>
+                    </div>
+                    <a href="index.html"><img src="images/emlogo300.png" class="logo" alt="ellen michaels design logo"></a>
+                    <div class="navbar">
+                        <div class="social">
+                            <a href="http://www.linkedin.com/#" target="_blank"><img src="images/linkedin.png" class="linkedin" alt="LinkedIn" height="50" width="50" /></a>
+                            <a href="http://www.instagram.com/#" target="_blank"><img src="images/instagram.png" class="instagram" alt="Insagram" height="50" width="50" /></a>
+                            <a href="mailto:ellenmoskowitz89@gmail.com"><img src="images/email.png" class="email" alt="EMail" height="50" width="50" /></a>
+                        </div>
+                    </div>
+                    <div class="mobile-nav">
+                         <div class="menu-btn" id="menu-btn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                         </div>
+                     
+                         <div class="responsive-menu">
+                            <ul>
+                               <li class="workLink">Work</li>
+                               <li class="contactLink">Contact</li>
+                            </ul>
+                         </div>
+                    </div>                                 
+                </nav>
+                    <h1>Ellen Michaels</h1>
+                    <h2>Graphic Designer & Teacher</h2>                
+        	</header>
+    
+            <div class="about">
+                    <p>Welcome to my site! I have been in the graphic design industry for over 6 years, specializing in print production, video production, graphic design, and photo editing.</p>
+                    <p>I also am certified to teach high school students, while helping them to become certified in ACA <em>(Adobe Certified Associate)</em> while they learn the necessities of a variety of programs in the adobe suite including Photoshop, InDesign, Illustrator, Dreamweaver, After Effects, and Premiere Pro.</p>
+        	</div>
+            <hr />
+            <div class="work">
+       	     <h2>Work</h2>
+                <ul id="tabs">
+                  <li><a href="#stationary">Stationary</a></li>
+                  <li><a href="#menus">Menus</a></li>
+                  <li><a href="#web">Web</a></li>
+                </ul>
+               	<div class="tabContent" id="stationary">       
+                    <a class="fancybox" href="images/logoface2.png" data-fancybox-group="gallery" title="Lorem ipsum dolor sit amet"><img src="images/logoface-thumb.jpg" alt="" /></a>
+                    <a class="fancybox" href="images/logoface2.png" data-fancybox-group="gallery" title="Lorem ipsum dolor sit amet"><img src="images/logoface-thumb.jpg" alt="" /></a>
+                    <a class="fancybox" href="images/logoface2.png" data-fancybox-group="gallery" title="Lorem ipsum dolor sit amet"><img src="images/logoface-thumb.jpg" alt="" /></a>
+                    <a class="fancybox" href="images/logoface2.png" data-fancybox-group="gallery" title="Lorem ipsum dolor sit amet"><img src="images/logoface-thumb.jpg" alt="" /></a>
+                    <a class="fancybox" href="images/logoface2.png" data-fancybox-group="gallery" title="Lorem ipsum dolor sit amet"><img src="images/logoface-thumb.jpg" alt="" /></a>
+                </div>
+               	<div class="tabContent" id="menus">       
+                    <a class="fancybox" href="images/logoface2.png" data-fancybox-group="gallery" title="Lorem ipsum dolor sit amet"><img src="images/logoface-thumb.jpg" alt="" /></a>
+                    <a class="fancybox" href="images/logoface2.png" data-fancybox-group="gallery" title="Lorem ipsum dolor sit amet"><img src="images/logoface-thumb.jpg" alt="" /></a>
+                    <a class="fancybox" href="images/logoface2.png" data-fancybox-group="gallery" title="Lorem ipsum dolor sit amet"><img src="images/logoface-thumb.jpg" alt="" /></a>
+                    <a class="fancybox" href="images/logoface2.png" data-fancybox-group="gallery" title="Lorem ipsum dolor sit amet"><img src="images/logoface-thumb.jpg" alt="" /></a>
+                    <a class="fancybox" href="images/logoface2.png" data-fancybox-group="gallery" title="Lorem ipsum dolor sit amet"><img src="images/logoface-thumb.jpg" alt="" /></a>
+                </div>
+               	<div class="tabContent" id="web">       
+                    <a class="fancybox" href="images/logoface2.png" data-fancybox-group="gallery" title="Lorem ipsum dolor sit amet"><img src="images/logoface-thumb.jpg" alt="" /></a>
+                    <a class="fancybox" href="images/logoface2.png" data-fancybox-group="gallery" title="Lorem ipsum dolor sit amet"><img src="images/logoface-thumb.jpg" alt="" /></a>
+                    <a class="fancybox" href="images/logoface2.png" data-fancybox-group="gallery" title="Lorem ipsum dolor sit amet"><img src="images/logoface-thumb.jpg" alt="" /></a>
+                    <a class="fancybox" href="images/logoface2.png" data-fancybox-group="gallery" title="Lorem ipsum dolor sit amet"><img src="images/logoface-thumb.jpg" alt="" /></a>
+                    <a class="fancybox" href="images/logoface2.png" data-fancybox-group="gallery" title="Lorem ipsum dolor sit amet"><img src="images/logoface-thumb.jpg" alt="" /></a>
+                </div>                                
+            </div>
+            <hr />
+            <div class="contact">
+	            <h2>Contact</h2>
+                <form method="post" action="formmail.php" name="ContactForm" enctype="multipart/form-data">
+                    <input type="hidden" name="env_report" value="REMOTE_HOST,REMOTE_ADDR,HTTP_USER_AGENT,AUTH_TYPE,REMOTE_USER" />
+                    <input type="hidden" name="recipients" value="emoskowitz89@gmail.com" />
+                    <input type="hidden" name="subject" value="Ellen Michaels Contact Form Submission" />
+						<div>
+                            <p>Name:</p>
+                            <input type="text" name="FullName" />
+                            <p>E-Mail Address:</p>
+                            <input type="text" name="EmailAddr" />
+                            <p>Approximate Budget:</p>
+                            <input type="text" name="budget" placeholder="$1000" />
+                        </div>
+                        <div>
+                            <p>File to upload (optional):</p>
+                            <p><input type="file" name="first_file" /></p>
+                            <p><input type="file" name="second_file" /></p>
+                            <p><input type="file" name="third_file" /></p>
+                        </div>
+                        <div>
+                            <p>What type of service would you like to inquire about?</p>
+                                <select name="service[]" multiple="multiple" size="14">
+                                    <option value="BusinessCards">Business Cards</option>
+                                    <option value="Stationary">Stationary</option>
+                                    <option value="GraphicDesign">Graphic Design</option>
+                                    <option value="LogoDesign">Logo Design</option>
+                                    <option value="WebDesign">Web Design</option>
+                                    <option value="Menus">Menus</option>
+                                    <option value="Flyers">Flyers</option>
+                                    <option value="Posters">Posters</option>
+                                    <option value="Certifications">Certifications</option>
+                                    <option value="TShirts">T-Shirts</option>
+                                    <option value="PrintService">Printing Services</option>
+                                    <option value="Awards">Awards / Trophy</option>
+                                    <option value="Photography">Photography</option>
+                                    <option value="VideoProduction">Video Production</option>
+                                </select><p class="selectAll">&nbsp;(Select all that apply; use CTRL-click to select)
+                                </p>
+                         </div>
+                         <div>
+                            <p>Please enter any comments:</p>
+                            <textarea name="mesg" rows="10" cols="40" placeholder="Please tell us about your projects purpose, goal to accomplish, and a description in as much detail as possible." ></textarea>
+                            <p><input type="submit" value="Submit" class="button" /></p>
+                         </div>
+                </form>
+            </div>
+            <script>
+			
+			  // Scroll to Animation for Nav
+			  
+			$(".workLink").click(function(){
+				$('.work').ScrollTo({
+					duration: 1000,
+					durationMode: 'all'
+				});
+			});
+			$(".contactLink").click(function(){
+				$('.contact').ScrollTo({
+					duration: 1000,
+					durationMode: 'all'
+				});
+			});
+						
+			$(document).ready(function(){
+
+				// Bouncing Nav
+				
+			    $(".workLink").hover(function(){
+				   $(".workLink").effect( "bounce", 
+				    {times:1}, 1000 );
+			    });
+			    $(".infoLink").hover(function(){
+				   $(".infoLink").effect( "bounce", 
+				    {times:1}, 1000 );
+			    });				
+			    $(".contactLink").hover(function(){
+				   $(".contactLink").effect( "bounce", 
+				    {times:1}, 1000 );
+			    });
+			    $(".linkedin").hover(function(){
+				   $(".linkedin").effect( "bounce", 
+				    {times:1}, 1000 );
+			    });
+			    $(".instagram").hover(function(){
+				   $(".instagram").effect( "bounce", 
+				    {times:1}, 1000 );
+			    });
+			    $(".email").hover(function(){
+				   $(".email").effect( "bounce", 
+				    {times:1}, 1000 );
+			    });												
+							  
+			  	// Mobile Hamburger Nav
+											
+				jQuery(function($){
+							 $( '.menu-btn' ).click(function(){
+								 $('.responsive-menu').toggleClass('expand')
+								 $('.menu-btn').toggleClass('open')
+							 })
+							 $( '.workLink' ).click(function(){
+								 $('.responsive-menu').removeClass('expand')
+								 $('.menu-btn').removeClass('open')
+							 })
+							 $( '.contactLink' ).click(function(){
+								 $('.responsive-menu').removeClass('expand')
+								 $('.menu-btn').removeClass('open')
+							 })
+						})
+				
+				// Fancybox
+			
+				$('.fancybox').fancybox();
+				
+			});
+
+				// Rotating logo on hover
+			
+				$(".logo").rotate({ 
+				   bind: 
+					 { 
+						mouseover : function() { 
+							$(this).rotate({animateTo:180})
+						},
+						mouseout : function() { 
+							$(this).rotate({animateTo:0})
+						}
+					 } 
+			   
+			});
+			
+			// textarea image
+			
+			$('textarea')
+			  .focus(function() { $(this).css("background", "none") })
+			  .blur(function() { if ($(this)[0].value == '') { $(this).css("background", "url(images/emlogonewa.png) center center no-repeat") } });
+			
+			</script>
+            <footer>
+            	<hr />
+                <p>&copy;2015 Ellen Michaels Designs</p>
+            </footer>
+        </body>
+</html>
