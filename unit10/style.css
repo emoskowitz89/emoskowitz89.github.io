@@ -18,6 +18,16 @@ h1, h2 {
   color:#0067B3;
   line-height: 1em;
 }
+.column {
+  float:left;
+  padding:20px;
+  width:25%;
+}
+
+.column img {
+  width:100%;
+}
+
 .element {
 	position: relative;
 	top:50%
